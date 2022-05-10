@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>동물의 (한)숨 - 챕터3 - (1)진행중인 논의들</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background-color: #e3f8ff;">
+
+    <div class="scroll" style="z-index: 9999;">
+        <img class="img_person" src="images/person.gif" alt="" style="width: 12vw; position:absolute; z-index: 9999; left:10vw; bottom:8vh;">
+        <img class="img_horse" src="images/horse.gif" alt="" style="width: 19vw; position:absolute; z-index: 9999; left:24vw; bottom:8vh;">
+        <img class="img_hamster" src="images/hamster.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:47vw; bottom:8vh;">
+        <img class="img_chicken" src="images/chicken.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:58vw; bottom:8vh;">
+        <img class="img_dog" src="images/dog.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:70vw; bottom:8vh;">
+        <img class="img_cat" src="images/cat.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:83vw; bottom:8vh;">
+        <audio controls style="width: 18vw; position: absolute; z-index: 9999; left: 10px; bottom: 10px;"> <source src="audio/UkuleleBeach.mp3" type="audio/mp3"> </audio>
+    </div>
+
+    <div class="horizon scroll">
+        <img src="images/skycloud.svg" alt="" style="height:33vh; margin-bottom: 67vh;" />
+    </div>
+    <div class="middle scroll">
+        <img src="images/grass.svg" alt="" style="height:17vh; margin-bottom: 16vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/ground.svg" alt="" style="height:20vh;" />
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'], 
+            {
+            height: 8000,
+            onScroll: function(percent) { 
+                console.log(percent);
+            }
+        });
+    }(jQuery));
+
+    </script>
+
+    <div class="content_wrap scroll" style="position: relative; width: 100%; height: 100%;">
+    </div>
+    
+    <div id="word1" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">요즘 한국에서 진행중인 논의들 중 반려동물의료비, 대체육, 동물원을 살펴볼까 하는데 어때?</p>	
+    </div>
+
+    <div id="word2" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">오 그게 뭐야?</p>	
+    </div>
+
+    <div id="question1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0.9">
+        <div class="questionbox1">
+            <p style="font-size: 3vw; padding: 32px">반려동물 의료비 논의을 살펴보실래요?</p>
+            <div style="text-align: center;">
+                <a class="gogo1" href="#" style="display: inline-block;width: 25vw;font-size: 3vw;">네 궁금해요!</a>
+                <a class="hide1" href="#" style="display: inline-block;width: 25vw;font-size: 3vw;">아뇨 건너뛸래요</a>
+            </div>	
+        </div>	
+    </div>
+
+    <div id="info1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:1">
+        <div style="width:90vw; height:90vh; background-color:#ffffff; opacity:1 !important; margin: 5vh 0 0 5vw; border-radius: 30px; text-align: center;">
+            <div style="text-align: right;">
+                <a class="close1" href="#" style="font-size: 1vw;display: inline-block;padding: 20px;">닫기 X</a>
+            </div>
+            <p style="font-size: 3vw; padding: 0; margin-top:-10px;">한국의 반려동물 의료비 논의
+                <br>
+                <span style="font-size: 12px;color: #666666;">출처 : 
+                    <a class="img_slide_a" href="https://www.yna.co.kr/view/AKR20171226083400797" style="color: #666666;" target="_blank">동물병원 진료비 천차만별</a>
+                </span>
+            </p>	
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width: 480px; margin-left: calc(50% - 240px);">
+                <div class="carousel-inner">
+                <div class="carousel-item active"><img class="d-block w-100" src="images/hospital_1.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_2.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_3.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_4.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_5.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_6.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_7.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_8.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_9.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_10.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_11.jpeg" alt="" /></div>
+                <div class="carousel-item"><img class="d-block w-100" src="images/hospital_12.jpeg" alt="" /></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button> <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+            </div>
+
+        </div>	
+    </div>
+
+    <div id="word3" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">그나저나 강아지,고양이 새 친구들도 와있었네~ 반가워! 근데 대체육은 뭐야? 고기를 대체하는 고기(?)라는 뜻..?</p>	
+    </div>
+
+    <div id="question2" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0.9">
+        <div class="questionbox1">
+            <p style="font-size: 3vw; padding: 32px">대체육 논의, 궁금하지 않으세요?</p>
+            <div style="text-align: center;">
+                <a class="gogo2" href="#" style="display: inline-block;width: 25vw;font-size: 3vw;">네 궁금해요!</a>
+                <a class="hide2" href="#" style="display: inline-block;width: 25vw;font-size: 3vw;">아뇨 건너뛸래요</a>
+            </div>	
+        </div>	
+    </div>
+
+    <div id="info2" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:1">
+        <div style="width:90vw; height:90vh; background-color:#ffffff; opacity:1 !important; margin: 5vh 0 0 5vw; border-radius: 30px; text-align: center;">
+            <div style="text-align: right;">
+                <a class="close2" href="#" style="font-size: 1vw;display: inline-block;padding: 20px;">닫기 X</a>
+            </div>
+            <p style="margin-top:-10px; font-size: 3vw; padding: 0px !important; text-align: center;">대체육 논의</p>	
+            <iframe id="video" width="700" height="393.75" src="https://www.youtube.com/embed/YanufCWphOo?start=128" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        </div>	
+    </div>
+
+    <div id="word4" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">최근 동물원에 대한 논의도 뜨겁다고 알고 있어. 사람원이라는 곳은 없잖아.. 인간을 위해 동물들을 가두고 구경하는 것이 윤리적으로 옳은 걸까?</p>	
+    </div>
+
+    <div id="question3" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0.9">
+        <div class="questionbox1">
+            <p style="font-size: 3vw; padding: 32px">동물원 논의를 같이 살펴보실래요?</p>
+            <div style="text-align: center;">
+                <a class="gogo3" href="#" style="display: inline-block;width: 25vw;font-size: 3vw;">네 살펴볼래요!</a>
+                <a href="index7.html" style="display: inline-block;width: 25vw;font-size: 3vw;">아뇨 건너뛸래요</a>
+            </div>	
+        </div>	
+    </div>
+
+    <div id="info3" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:1">
+        <div style="width:90vw; height:90vh; background-color:#ffffff; opacity:1 !important; margin: 5vh 0 0 5vw; border-radius: 30px; text-align: center;">
+            <div style="text-align: right;">
+                <a class="close0" href="index7.html" style="font-size: 1vw; display: inline-block;padding: 20px;">닫기 X</a>
+            </div>
+            <p style="font-size: 3vw; padding: 0; margin-top: -10px;">동물원 논의</p>	
+
+            <div class="container">
+                <ul class="tabs">
+                  <li class="tab-link current" data-tab="tab-1">기사1</li>
+                  <li class="tab-link" data-tab="tab-2">기사2</li>
+                </ul>            
+                <div id="tab-1" class="tab-content current">
+                    <h4 style="margin: 10px 0;">동물권 침해 논란 '동물원'…폐쇄해야 할까요 [김수완의 동물리포트]</h4>
+                    <p style="font-size: 12px !important;color: #666;">이미지 클릭 시 기사로 이동</p>
+                    <a href="https://www.asiae.co.kr/article/2020110613325314766" target="_blank"><img src="images/zoo.jpeg" alt="" class="zoo1" style="height: 50vh;"></a>
+                </div>
+                <div id="tab-2" class="tab-content">
+                    <h4 style="margin: 10px 0;">[전주 동물원의 변신] ② 존폐의 갈림길, 생태 동물원 가능성은?</h4>
+                    <p style="font-size: 12px !important;color: #666;">이미지 클릭 시 기사로 이동</p>
+                    <a href="https://www.yna.co.kr/view/AKR20191029146400055" target="_blank"><img src="images/zoo2.jpeg" alt="" class="zoo2" style="height:47vh;"></a>
+                </div>                     
+            </div>      
+            <script>
+              $(document).ready(function(){               
+                $('ul.tabs li').click(function(){
+                  var tab_id = $(this).attr('data-tab');       
+                  $('ul.tabs li').removeClass('current');
+                  $('.tab-content').removeClass('current');       
+                  $(this).addClass('current');
+                  $("#"+tab_id).addClass('current');
+                })      
+              })
+            </script>
+
+        </div>
+
+    </div>
+
+    <script>
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 10 && $('body, html').scrollTop() < 200){	
+            $("#word1").fadeIn();
+        }else{	
+            $("#word1").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 200 && $('body, html').scrollTop() < 350){	
+            $("#word2").fadeIn();
+        }else{	
+            $("#word2").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 350 && $('body, html').scrollTop() < 900){	
+            $("#question1").fadeIn();
+        }else{	
+            $("#question1").fadeOut();
+	    }	
+    })
+    $(".gogo1").click(function(){
+        $("#question1").css('opacity','0');
+        event.preventDefault();
+    });
+    $(".hide1").click(function(){
+        $("#question1").css('opacity','0');
+        $("#info1").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 900 && $('body, html').scrollTop() < 1700){	
+            $("#info1").fadeIn();
+        }else{	
+            $("#info1").fadeOut();
+	    }	
+    })
+    $(".close1").click(function(){
+        $("#info1").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1700 && $('body, html').scrollTop() < 1900){	
+            $("#word3").fadeIn();
+        }else{	
+            $("#word3").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1900 && $('body, html').scrollTop() < 2500){	
+            $("#question2").fadeIn();
+        }else{	
+            $("#question2").fadeOut();
+	    }	
+    })
+    $(".gogo2").click(function(){
+        $("#question2").css('opacity','0');
+        event.preventDefault();
+    });
+    $(".hide2").click(function(){
+        $("#question2").css('opacity','0');
+        $("#info2").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 2500 && $('body, html').scrollTop() < 3400){	
+            $("#info2").fadeIn();
+        }else{	
+            $("#info2").fadeOut();
+	    }	
+    })
+    $(".close2").click(function(){
+        //$("#video #player > div").addClass("paused-mode");
+        //$("#video #player > div").addClass("ytp-expand-pause-overlay");
+        $("#video").attr("src", "unset");
+        $("#info2").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 3400 && $('body, html').scrollTop() < 3600){	
+            $("#word4").fadeIn();
+        }else{	
+            $("#word4").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 3600 && $('body, html').scrollTop() < 4200){	
+            $("#question3").fadeIn();
+        }else{	
+            $("#question3").fadeOut();
+	    }	
+    })
+    $(".gogo3").click(function(){
+        $("#question3").css('opacity','0');
+        event.preventDefault();
+    });
+    $(".hide3").click(function(){
+        $("#question3").css('opacity','0');
+        $("#info3").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 4200 && $('body, html').scrollTop() < 9000){	
+            $("#info3").fadeIn();
+        }else{	
+            $("#info3").fadeOut();
+	    }	
+    })
+    $(".close3").click(function(){
+        $("#info3").css('opacity','0');
+        event.preventDefault();
+    });
+ 
+    </script>
+
+
+
+
+<script type='text/javascript'>
+    $(function(){
+      var lastScroll = 0;
+      $(window).scroll(function(event){
+          var st = $(this).scrollTop();
+          if (st > lastScroll){
+            $(".img_person").attr("src", "images/person.gif");
+            $(".img_horse").attr("src", "images/horse.gif");
+            $(".img_hamster").attr("src", "images/hamster.gif");
+            $(".img_chicken").attr("src", "images/chicken.gif");
+            $(".img_dog").attr("src", "images/dog.gif");
+            $(".img_cat").attr("src", "images/cat.gif");
+            $(".img_whale").attr("src", "images/whale.gif");
+          }
+          else {
+            $(".img_person").attr("src", "images/person_b.gif");
+            $(".img_horse").attr("src", "images/horse_b.gif");
+            $(".img_hamster").attr("src", "images/hamster_b.gif");
+            $(".img_chicken").attr("src", "images/chicken_b.gif");
+            $(".img_dog").attr("src", "images/dog_b.gif");
+            $(".img_cat").attr("src", "images/cat_b.gif");
+            $(".img_whale").attr("src", "images/whale_b.gif");
+          }
+          lastScroll = st;
+      });
+    });
+</script>
+
+</body>
+</html>

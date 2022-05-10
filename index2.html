@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>동물의 (한)숨 - 챕터1 - (1)문화</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body style="background-color: #e3f8ff;">
+
+    <div class="scroll" style="z-index: 9999;">
+        <img class="img_person" src="images/person.gif" alt="" style="width: 12vw; position:absolute; z-index: 9999; left:15vw; bottom:100px;">
+        <img class="img_horse" src="images/horse.gif" alt="" style="width: 19vw; position:absolute; z-index: 9999; left:67vw; bottom:100px;">
+        <audio controls style="width: 18vw; position: absolute; z-index: 9999; left: 10px; bottom: 10px;"> <source src="audio/MrTurtle.mp3" type="audio/mp3"> </audio>
+    </div>
+
+    <div class="horizon scroll">
+        <img src="images/skycloud.svg" alt="" style="height:33vh; margin-bottom: 67vh;" />
+    </div>
+    <div class="middle scroll">
+        <img src="images/grass.svg" alt="" style="height:17vh; margin-bottom: 16vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/ground.svg" alt="" style="height:20vh;" />
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'], 
+            {
+            height: 8000,
+            onScroll: function(percent) { 
+                console.log(percent);
+            }
+        });
+    }(jQuery));
+
+    </script>
+
+    <div class="content_wrap scroll" style="position: relative; width: 100%; height: 100%;">
+    </div>
+    
+    <div id="word1" class="scroll wordbox1">
+        <p class="typing-txt" style="font-size: 3vw; padding: 32px">[문화] 어? 저기 얼마전 드라마 촬영 중 다친 말 아니야? 왜 한숨을 쉬고 있지?</p>
+        <p class="typing" style="font-size: 3vw; padding: 32px"></p>
+    </div>
+
+    <div id="word2" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">안녕 말아~</p>	
+    </div>
+
+    <div id="word3" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">안녕~</p>	
+    </div>
+
+    <div id="word4" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">왜 한숨을 그렇게 쉬고 있어?</p>	
+    </div>
+
+    <div id="word5" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">너도 알다시피, 문화계에서 컨텐츠를 만드는 데에 동물이 동원되곤 하거든. 그러다 나처럼 다치거나 목숨을 잃는 경우도 종종 발생해. 비참하고 억울해서 한숨 쉬어봤어..</p>	
+    </div>
+    <div id="info1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:1">
+        <div style="width:90vw; height:90vh; background-color:#ffffff; opacity:1 !important; margin: 5vh 0 0 5vw; border-radius: 30px; text-align: center;">
+            <div style="text-align: right;">
+                <a class="close" href="#" style="font-size: 1vw; display: inline-block;padding: 20px;">닫기 X</a>
+            </div>
+            <p style="margin-top:-10px; font-size: 3vw; padding: 0px !important; text-align: center;">문화계에서 동원되는 동물의 실태</p>	
+            <iframe id="video" width="700" height="393.75" src="https://www.youtube.com/embed/vG2b6Y1gTeE?start=34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>	
+    </div>
+
+    <div id="word6" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">그렇구나.. 인간의 대표로 사과할게.. 우리 같이 다른 동물들의 이야기도 들을래?</p>	
+    </div>
+
+    <div id="word7" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">좋아 그러자!</p>	
+    </div>
+
+    <div id="question1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0.9">
+        <div class="questionbox1">
+            <p style="font-size: 3vw; padding: 32px">의료 / 음식 중 어느 분야를 둘러보실래요?</p>
+            <div style="text-align: center;">
+                <a href="index3.html" style="display: inline-block;width: 25vw;font-size: 3vw;">의료</a>
+                <a href="index4.html" style="display: inline-block;width: 25vw;font-size: 3vw;">음식</a>
+            </div>	
+        </div>	
+    </div>
+    
+    <script>
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 10 && $('body, html').scrollTop() < 400){	
+            $("#word1").fadeIn();
+        }else{	
+            $("#word1").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 400 && $('body, html').scrollTop() < 900){	
+            $("#word2").fadeIn();
+        }else{	
+            $("#word2").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 900 && $('body, html').scrollTop() < 1300){	
+            $("#word3").fadeIn();
+        }else{	
+            $("#word3").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1300 && $('body, html').scrollTop() < 1700){	
+            $("#word4").fadeIn();
+        }else{	
+            $("#word4").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1700 && $('body, html').scrollTop() < 2100){	
+            $("#word5").fadeIn();
+        }else{	
+            $("#word5").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 2100 && $('body, html').scrollTop() < 2700){	
+            $("#info1").fadeIn();
+        }else{	
+            $("#info1").fadeOut();
+	    }	
+    })
+    $(".close").click(function(){
+        $("#video").attr("src", "unset");
+        $("#info1").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 2700 && $('body, html').scrollTop() < 3100){	
+            $("#word6").fadeIn();
+        }else{	
+            $("#word6").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 3100 && $('body, html').scrollTop() < 3500){	
+            $("#word7").fadeIn();
+        }else{	
+            $("#word7").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 3500 && $('body, html').scrollTop() < 9000){	
+            $("#question1").fadeIn();
+        }else{	
+            $("#question1").fadeOut();
+	    }	
+    })
+    $(".gogo1").click(function(){
+        $("#question1").css('opacity','0');
+        event.preventDefault();
+    });
+
+    </script>
+
+
+
+
+<script type='text/javascript'>
+    $(function(){
+      var lastScroll = 0;
+      $(window).scroll(function(event){
+          var st = $(this).scrollTop();
+          if (st > lastScroll){
+            $(".img_person").attr("src", "images/person.gif");
+            $(".img_horse").attr("src", "images/horse.gif");
+            $(".img_hamster").attr("src", "images/hamster.gif");
+            $(".img_chicken").attr("src", "images/chicken.gif");
+            $(".img_dog").attr("src", "images/dog.gif");
+            $(".img_cat").attr("src", "images/cat.gif");
+            $(".img_whale").attr("src", "images/whale.gif");
+          }
+          else {
+            $(".img_person").attr("src", "images/person_b.gif");
+            $(".img_horse").attr("src", "images/horse_b.gif");
+            $(".img_hamster").attr("src", "images/hamster_b.gif");
+            $(".img_chicken").attr("src", "images/chicken_b.gif");
+            $(".img_dog").attr("src", "images/dog_b.gif");
+            $(".img_cat").attr("src", "images/cat_b.gif");
+            $(".img_whale").attr("src", "images/whale_b.gif");
+          }
+          lastScroll = st;
+      });
+    });
+</script>
+
+</body>
+</html>

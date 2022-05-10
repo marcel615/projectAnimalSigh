@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>동물의 (한)숨 - 챕터1 - (3)음식</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background-color: #e3f8ff;">
+
+    <div class="scroll" style="z-index: 9999;">
+        <img class="img_person" src="images/person.gif" alt="" style="width: 12vw; position:absolute; z-index: 9999; left:10vw; bottom:100px;">
+        <img class="img_horse" src="images/horse.gif" alt="" style="width: 19vw; position:absolute; z-index: 9999; left:22vw; bottom:100px;">
+        <img class="img_hamster" src="images/hamster.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:44vw; bottom:100px;">
+        <img class="img_chicken" src="images/chicken.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:80vw; bottom:100px;">
+        <audio controls style="width: 18vw; position: absolute; z-index: 9999; left: 10px; bottom: 10px;"> <source src="audio/SummerShower.mp3" type="audio/mp3"> </audio>
+    </div>
+
+    <div class="horizon scroll">
+        <img src="images/skycloud.svg" alt="" style="height:33vh; margin-bottom: 67vh;" />
+    </div>
+    <div class="middle scroll">
+        <img src="images/grass.svg" alt="" style="height:17vh; margin-bottom: 16vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/ground.svg" alt="" style="height:20vh;" />
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'], 
+            {
+            height: 8000,
+            onScroll: function(percent) { 
+                console.log(percent);
+            }
+        });
+    }(jQuery));
+
+    </script>
+
+    <div class="content_wrap scroll" style="position: relative; width: 100%; height: 100%;">
+    </div>
+    
+    <div id="word1" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">[음식] 엥? 또 어디선가 닭의 한숨소리가 들리지 않아?</p>	
+    </div>
+
+    <div id="word2" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">오 들린다! 어디있지?</p>	
+    </div>
+
+    <div id="word3" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">안녕 닭아~</p>	
+    </div>
+
+    <div id="word4" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">안녕~</p>	
+    </div>
+
+    <div id="word5" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">왜 한숨을 그렇게 쉬고 있어?</p>	
+    </div>
+
+    <div id="word6" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">나는 양계장을 나온 암탉인데, 밤낮 할 것 없이 냄새나는 철창 안에서 알 낳는 기계가 된 나와 친구들이 서글퍼서 한숨 쉬어봤어..</p>	
+    </div>
+    <div id="info1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:1">
+        <div style="width:90vw; height:90vh; background-color:#ffffff; opacity:1 !important; margin: 5vh 0 0 5vw; border-radius: 30px; text-align: center;">
+            <div style="text-align: right;">
+                <a class="close" href="#" style="font-size: 1vw;display: inline-block;padding: 20px;">닫기 X</a>
+            </div>
+            <p style="font-size: 3vw; padding: 0; margin-top: -10px;">식품계 공장형 육/가금류 동물</p>
+            
+            <div class="container">
+                <ul class="tabs">
+                  <li class="tab-link current" data-tab="tab-1">기사1</li>
+                  <li class="tab-link" data-tab="tab-2">기사2</li>
+                  <li class="tab-link" data-tab="tab-3">칼럼</li>
+                </ul>            
+                <div id="tab-1" class="tab-content current">
+                    <h4 style="margin: 10px 0;">“살해되지 않을 권리” 인간들의 핫플레이스에 울려퍼진 '동물 해방' 목소리</h4>
+                    <p style="font-size: 12px !important;color: #666;">이미지 클릭 시 기사로 이동</p>
+                    <a href="https://www.khan.co.kr/national/national-general/article/202112061438001#" target="_blank"><img src="images/chicken_free.jpeg" alt="치킨 프리" style="height:47vh;"></a>
+                </div>
+                <div id="tab-2" class="tab-content">
+                    <h4 style="margin: 10px 0;">살충제 계란부터 독돼지까지… 공장형 농장의 역습</h4>
+                    <p style="font-size: 12px !important;color: #666;">이미지 클릭 시 기사로 이동</p>
+                    <a href="https://www.hankyung.com/society/article/2017082022831" target="_blank"><img src="images/wild_factory.jpg" alt="" class="wild_factory" style="height:47vh;"></a>
+                </div>
+                <div id="tab-3" class="tab-content">
+                    <h4 style="margin: 10px 0;">치킨은 결코 미담일 수 없다</h4>
+                    <p style="font-size: 12px !important;color: #666;">이미지 클릭 시 칼럼으로 이동</p>
+                    <a href="https://www.khan.co.kr/opinion/column/article/202202280300035" target="_blank"><img src="images/chickens.jpeg" alt="" class="chickens" style="height:47vh;"></a>
+                </div>   
+                          
+            </div>      
+            <script>
+              $(document).ready(function(){               
+                $('ul.tabs li').click(function(){
+                  var tab_id = $(this).attr('data-tab');       
+                  $('ul.tabs li').removeClass('current');
+                  $('.tab-content').removeClass('current');       
+                  $(this).addClass('current');
+                  $("#"+tab_id).addClass('current');
+                })      
+              })
+            </script>
+
+        </div>	
+    </div>
+
+    <div id="word7" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">그렇구나.. 인간의 대표로 사과할게.. 다른 나라는 어떤지 한국은 어떤 변화움직임이 있는지 같이 찾으러 가볼래?</p>	
+    </div>
+
+    <div id="word8" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">좋아 그러자!</p>	
+    </div>
+
+    <div id="question1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0.9">
+        <div class="questionbox1">
+            <p style="font-size: 3vw; padding: 32px">해외,국내에 있는 다양한 관련 사례를 둘러보실래요?</p>
+            <div style="text-align: center;">
+                <a href="index5.html" style="display: inline-block;width: 25vw;font-size: 3vw;">네 둘러볼래요!</a>
+                <a href="index8.html" style="display: inline-block;width: 25vw;font-size: 3vw;">아뇨 이만 쉴게요..</a>
+            </div>	
+        </div>	
+    </div>
+    
+    <script>
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 10 && $('body, html').scrollTop() < 400){	
+            $("#word1").fadeIn();
+        }else{	
+            $("#word1").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 400 && $('body, html').scrollTop() < 600){	
+            $("#word2").fadeIn();
+        }else{	
+            $("#word2").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 600 && $('body, html').scrollTop() < 900){	
+            $("#word3").fadeIn();
+        }else{	
+            $("#word3").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 900 && $('body, html').scrollTop() < 1200){	
+            $("#word4").fadeIn();
+        }else{	
+            $("#word4").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1200 && $('body, html').scrollTop() < 1500){	
+            $("#word5").fadeIn();
+        }else{	
+            $("#word5").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1500 && $('body, html').scrollTop() < 2100){	
+            $("#word6").fadeIn();
+        }else{	
+            $("#word6").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 2100 && $('body, html').scrollTop() < 2700){	
+            $("#info1").fadeIn();
+        }else{	
+            $("#info1").fadeOut();
+	    }	
+    })
+    $(".close").click(function(){
+        $("#info1").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 2700 && $('body, html').scrollTop() < 3100){	
+            $("#word7").fadeIn();
+        }else{	
+            $("#word7").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 3100 && $('body, html').scrollTop() < 3500){	
+            $("#word8").fadeIn();
+        }else{	
+            $("#word8").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 3500 && $('body, html').scrollTop() < 9000){	
+            $("#question1").fadeIn();
+        }else{	
+            $("#question1").fadeOut();
+	    }	
+    })
+    $(".gogo1").click(function(){
+        $("#question1").css('opacity','0');
+        event.preventDefault();
+    });
+
+    </script>
+
+
+
+
+<script type='text/javascript'>
+    $(function(){
+      var lastScroll = 0;
+      $(window).scroll(function(event){
+          var st = $(this).scrollTop();
+          if (st > lastScroll){
+            $(".img_person").attr("src", "images/person.gif");
+            $(".img_horse").attr("src", "images/horse.gif");
+            $(".img_hamster").attr("src", "images/hamster.gif");
+            $(".img_chicken").attr("src", "images/chicken.gif");
+            $(".img_dog").attr("src", "images/dog.gif");
+            $(".img_cat").attr("src", "images/cat.gif");
+            $(".img_whale").attr("src", "images/whale.gif");
+          }
+          else {
+            $(".img_person").attr("src", "images/person_b.gif");
+            $(".img_horse").attr("src", "images/horse_b.gif");
+            $(".img_hamster").attr("src", "images/hamster_b.gif");
+            $(".img_chicken").attr("src", "images/chicken_b.gif");
+            $(".img_dog").attr("src", "images/dog_b.gif");
+            $(".img_cat").attr("src", "images/cat_b.gif");
+            $(".img_whale").attr("src", "images/whale_b.gif");
+          }
+          lastScroll = st;
+      });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>동물의 (한)숨 - 인트로</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body style="background-color: #e3f8ff;"> 
+
+    <div class="scroll" style="z-index: 9999;">
+        <img class="img_person" src="images/person.gif" alt="" style="width: 12vw; position:absolute; z-index: 9999; left:50px; bottom:100px;">
+        <audio controls style="width: 18vw; position: absolute; z-index: 9999; left: 10px; bottom: 10px;"> <source src="audio/SummerShower.mp3" type="audio/mp3"> </audio>
+    </div>
+
+    <div class="horizon scroll" style="overflow:hidden;">
+        <img src="images/skycloud.svg" alt="" style="height:33vh; margin-bottom: 67vh; margin-left: -100px;" />
+    </div>
+    <div class="middle scroll" style="overflow:hidden;">
+        <img src="images/grass.svg" alt="" style="height:17vh; margin-bottom: 16vh; margin-left: -100px;" />
+    </div>
+    <div class="front scroll" style="overflow:hidden;">
+        <img src="images/ground.svg" alt="" style="height:20vh; margin-left: -100px;" />
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'], 
+            {
+            height: 8000,
+            onScroll: function(percent) { 
+                console.log(percent);
+            }
+        });
+    }(jQuery));
+
+    </script>
+
+    <div class="content_wrap scroll" style="position: relative; width: 100%; height: 100%;">
+        <h1 class="title_box" style="position: absolute; z-index: 9999; top: 0;left: 0;">
+            <img src="images/title.gif" alt="" style="width: 70vw; width: 70vw; padding: 0vh 0 0 15vw;" />
+            <p style="font-size: 2vw !important; margin-left: 46vw; margin-top: -5vh;">스크롤하세요</p>
+        </h1>
+    </div>
+    
+    <div id="word1" class="scroll wordbox1">
+        <p class="typing-txt" style="font-size: 3vw; padding: 32px">음… 어디서 동물의 한숨 소리가 들리는 것 같은데 한번 가서 왜 한숨 쉬는지 물어볼까?</p>
+        <p class="typing" style="font-size: 3vw; padding: 32px"></p>
+    </div>
+
+    <div id="question1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0.9">
+        <div class="questionbox1">
+            <p style="font-size: 3vw; padding: 32px">동물들이 한숨을 왜 쉬는지 궁금하지 않으세요?</p>
+            <div style="text-align: center;">
+                <a class="gogo" href="#" style="display: inline-block;width: 40vw;font-size: 3vw;">네 궁금해요!</a>
+                <a href="index8.html" style="display: inline-block;width: 40vw;font-size: 3vw;" >아뇨 그닥 궁금하지 않아요..</a>
+            </div>	
+        </div>	
+    </div>
+
+    <div id="question2" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0.9">
+        <div class="questionbox1">
+            <p style="font-size: 3vw; padding: 32px">문화 / 의료 / 음식 중 어느 분야를 먼저 둘러보실래요?</p>
+            <div style="text-align: center;">
+                <a href="index2.html" style="display: inline-block;width: 25vw;font-size: 3vw;">문화</a>
+                <a href="index3.html" style="display: inline-block;width: 25vw;font-size: 3vw;" >의료</a>
+                <a href="index4.html" style="display: inline-block;width: 25vw;font-size: 3vw;" >음식</a>
+            </div>	
+        </div>	
+    </div>
+
+    <script>
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1000 && $('body, html').scrollTop() < 2000){	
+            $("#word1").fadeIn();
+        }else{	
+            $("#word1").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 2000 && $('body, html').scrollTop() < 3000){	
+            $("#question1").fadeIn();
+        }else{	
+            $("#question1").fadeOut();
+	    }	
+    })	
+    /*
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 2000 && $('body, html').scrollTop() < 3000){	
+            function question1_show(){
+                $("#question1").fadeIn();
+                $('body').addClass('scrollDisable').on('scroll touchmove mousewheel', function(e){
+                    e.preventDefault();
+                });
+            }
+        }else{	
+            function question1_hide(){
+                $("#question1").fadeOut();
+                $('body').removeClass('scrollDisable').off('scroll touchmove mousewheel');
+            }
+	    }	
+    })	
+    */
+    $(".gogo").click(function(){
+        $("#question1").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 3000 && $('body, html').scrollTop() < 9000){	
+            $("#question2").fadeIn();
+        }else{	
+            $("#question2").fadeOut();
+	    }	
+    })
+    $(".gogo2").click(function(){
+        $("#question2").css('opacity','0');
+        event.preventDefault();
+    });
+
+    </script>
+
+
+
+
+<script type='text/javascript'>
+    $(function(){
+      var lastScroll = 0;
+      $(window).scroll(function(event){
+          var st = $(this).scrollTop();
+          if (st > lastScroll){
+            $(".img_person").attr("src", "images/person.gif");
+            $(".img_horse").attr("src", "images/horse.gif");
+            $(".img_hamster").attr("src", "images/hamster.gif");
+            $(".img_chicken").attr("src", "images/chicken.gif");
+            $(".img_dog").attr("src", "images/dog.gif");
+            $(".img_cat").attr("src", "images/cat.gif");
+            $(".img_whale").attr("src", "images/whale.gif");
+          }
+          else {
+            $(".img_person").attr("src", "images/person_b.gif");
+            $(".img_horse").attr("src", "images/horse_b.gif");
+            $(".img_hamster").attr("src", "images/hamster_b.gif");
+            $(".img_chicken").attr("src", "images/chicken_b.gif");
+            $(".img_dog").attr("src", "images/dog_b.gif");
+            $(".img_cat").attr("src", "images/cat_b.gif");
+            $(".img_whale").attr("src", "images/whale_b.gif");
+          }
+          lastScroll = st;
+      });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>동물의 (한)숨 - 아웃트로</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background-color: #e3f8ff;">
+
+    <div class="scroll" style="z-index: 9999;">
+        <img class="img_person" src="images/person.gif" alt="" style="width: 12vw; position:absolute; z-index: 9999; left:10vw; bottom:25vh;">
+        <img class="img_horse" src="images/horse.gif" alt="" style="width: 19vw; position:absolute; z-index: 9999; left:21vw; bottom:25vh;">
+        <img class="img_hamster" src="images/hamster.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:42vw; bottom:25vh;">
+        <img class="img_chicken" src="images/chicken.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:53vw; bottom:25vh;">
+        <img class="img_dog" src="images/dog.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:67vw; bottom:25vh;">
+        <img class="img_cat" src="images/cat.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:79vw; bottom:25vh;">
+        <img class="img_whale" src="images/whale.gif" alt="" style="width: 17vw; position:absolute; z-index: 9999; left:40vw; bottom:4vh;">
+        <audio controls style="width: 18vw; position: absolute; z-index: 9999; left: 10px; bottom: 10px;"> <source src="audio/SummerShower.mp3" type="audio/mp3"> </audio>
+    </div>
+
+    <div class="horizon scroll">
+        <img src="images/skycloud.svg" alt="" style="height:33vh; margin-bottom: 67vh;" />
+    </div>
+    <div class="middle scroll">
+        <img src="images/grass.svg" alt="" style="height:17vh; margin-bottom: 33vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/ground.svg" alt="" style="height:20vh; margin-bottom: 18vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/sea_far.svg" alt="" style="height:20vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/sea_near.svg" alt="" style="height:12vh;" />
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'], 
+            {
+            height: 8000,
+            onScroll: function(percent) { 
+                console.log(percent);
+            }
+        });
+    }(jQuery));
+
+    </script>
+
+    <div class="content_wrap scroll" style="position: relative; width: 100%; height: 100%;">
+    </div>
+    
+    <div id="word1" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">우리가 평소 듣지 못한 동물들의 한숨, 이야기가 듣고 싶다면 언제든 다시 만나요~ 안녕!</p>	
+    </div>
+
+    <div id="info1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0,9">
+        <div style="width:90vw; height:90vh; background-color:#ffffff; opacity:1 !important; margin: 5vh 0 0 5vw; border-radius: 30px; text-align: center;">
+            <p style="font-size: 3vw; padding: 32px;">참고 문헌</p>
+            <p style="font-size: 11px !important; line-height: 17px;">
+                챕터1 - (1)문화<br>
+                https://www.youtube.com/embed/vG2b6Y1gTeE?start=34
+                <br>
+                챕터1 - (2)의료<br>
+                https://www.hankookilbo.com/News/Read/A2021072812330004591
+                <br>
+                챕터1 - (3)음식<br>
+                https://www.khan.co.kr/national/national-general/article/202112061438001#
+                <br>
+                https://www.hankyung.com/society/article/2017082022831
+                <br>
+                https://www.khan.co.kr/opinion/column/article/202202280300035
+                <br>
+                챕터2 - (1)동물권<br>
+                https://url.kr/f8x2oi
+                <br>
+                챕터2 - (2)동물을 대하는 해외 사례<br>
+                https://www.youtube.com/embed/4uqCiqph5Bk?start=49
+                <br>
+                챕터2 - (3)한국의 변화 움직임<br>
+                https://url.kr/x5ne9d
+                <br>
+                챕터3 - (1)반려동물 의료비 논의<br>
+                https://www.yna.co.kr/view/AKR20171226083400797
+                <br>
+                챕터3 - (2)대체육 논의<br>
+                https://www.youtube.com/embed/YanufCWphOo?start=128
+                <br>
+                챕터3 - (3)동물원 논의<br>
+                https://www.asiae.co.kr/article/2020110613325314766
+                <br>
+                https://www.yna.co.kr/view/AKR20191029146400055
+                <br>
+            </p>
+            <p><a href="index.html" style="border: 3px solid #000000; padding: 10px 20px; border-radius: 48px; background-color: #e4c200;">처음으로 돌아가기</a> </p>
+            <p style="font-size:13px !important;">기획 · 제작 · 글 · 디자인 · 퍼블리싱코드 : 박 채 움</p>
+    </div>
+
+    
+    <script>
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 10 && $('body, html').scrollTop() < 1000){	
+            $("#word1").fadeIn();
+        }else{	
+            $("#word1").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1000 && $('body, html').scrollTop() < 9000){	
+            $("#info1").fadeIn();
+        }else{	
+            $("#info1").fadeOut();
+	    }	
+    })
+
+    </script>
+
+<script type='text/javascript'>
+    $(function(){
+      var lastScroll = 0;
+      $(window).scroll(function(event){
+          var st = $(this).scrollTop();
+          if (st > lastScroll){
+            $(".img_person").attr("src", "images/person.gif");
+            $(".img_horse").attr("src", "images/horse.gif");
+            $(".img_hamster").attr("src", "images/hamster.gif");
+            $(".img_chicken").attr("src", "images/chicken.gif");
+            $(".img_dog").attr("src", "images/dog.gif");
+            $(".img_cat").attr("src", "images/cat.gif");
+            $(".img_whale").attr("src", "images/whale.gif");
+          }
+          else {
+            $(".img_person").attr("src", "images/person_b.gif");
+            $(".img_horse").attr("src", "images/horse_b.gif");
+            $(".img_hamster").attr("src", "images/hamster_b.gif");
+            $(".img_chicken").attr("src", "images/chicken_b.gif");
+            $(".img_dog").attr("src", "images/dog_b.gif");
+            $(".img_cat").attr("src", "images/cat_b.gif");
+            $(".img_whale").attr("src", "images/whale_b.gif");
+          }
+          lastScroll = st;
+      });
+    });
+</script>
+</body>
+</html>

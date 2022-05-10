@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>동물의 (한)숨 - 챕터3 - (2)동물에 대해 한마디</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body style="background-color: #e3f8ff;">
+    <div class="scroll" style="z-index: 9999;">
+        <img class="img_person" src="images/person.gif" alt="" style="width: 12vw; position:absolute; z-index: 9999; left:10vw; bottom:25vh;">
+        <img class="img_horse" src="images/horse.gif" alt="" style="width: 19vw; position:absolute; z-index: 9999; left:21vw; bottom:25vh;">
+        <img class="img_hamster" src="images/hamster.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:42vw; bottom:25vh;">
+        <img class="img_chicken" src="images/chicken.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:53vw; bottom:25vh;">
+        <img class="img_dog" src="images/dog.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:67vw; bottom:25vh;">
+        <img class="img_cat" src="images/cat.gif" alt="" style="width: 8vw; position:absolute; z-index: 9999; left:79vw; bottom:25vh;">
+        <img class="img_whale" src="images/whale.gif" alt="" style="width: 17vw; position:absolute; z-index: 9999; left:40vw; bottom:4vh;">
+        <audio controls style="width: 18vw; position: absolute; z-index: 9999; left: 10px; bottom: 10px;"> <source src="audio/SummerShower.mp3" type="audio/mp3"> </audio>
+    </div>
+
+    <div class="horizon scroll">
+        <img src="images/skycloud.svg" alt="" style="height:33vh; margin-bottom: 67vh;" />
+    </div>
+    <div class="middle scroll">
+        <img src="images/grass.svg" alt="" style="height:17vh; margin-bottom: 33vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/ground.svg" alt="" style="height:20vh; margin-bottom: 18vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/sea_far.svg" alt="" style="height:20vh;" />
+    </div>
+    <div class="front scroll">
+        <img src="images/sea_near.svg" alt="" style="height:12vh;" />
+    </div>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'], 
+            {
+            height: 8000,
+            onScroll: function(percent) { 
+                console.log(percent);
+            }
+        });
+    }(jQuery));
+
+    </script>
+
+    <div class="content_wrap scroll" style="position: relative; width: 100%; height: 100%;">
+    </div>
+    
+    <div id="word1" class="scroll wordbox1">
+        <p style="font-size: 3vw; padding: 32px">동물원에서 최근 바다로 돌아간 고래 친구도 왔네~ 반갑다! 지금까지 동물들의 한숨 소리를 들으면서, 다양한 사례와 논의들을 살펴봤어. 앞으로 개인적 사회적인 인식변화와 법 개정 등의 노력이 필요해보여. 마지막으로, '동물'에 대해 어떤 생각이든 자유롭게 한마디 적고 갈래?</p>	
+    </div>
+
+    <div id="word2" class="scroll wordbox2">
+        <p style="font-size: 3vw; padding: 32px">그래볼까?</p>	
+    </div>
+
+    <div id="question1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0.9">
+        <div class="questionbox1">
+            <p style="font-size: 3vw; padding: 32px">동물에 대해 한마디 남겨주실래요?</p>
+            <div style="text-align: center;">
+                <a class="gogo1" href="#" style="display: inline-block;width: 25vw;font-size: 3vw;">네 남길래요!</a>
+                <a href="index8.html" style="display: inline-block;width: 25vw;font-size: 3vw;">다음에 남길게요~</a>
+            </div>	
+        </div>	
+    </div>
+
+    <div id="info1" class="scroll" style="z-index: 9999; display: none; width:100vw; height:100vh; background-color:#868686; opacity:0,9">
+        <div style="width:90vw; height:90vh; background-color:#ffffff; opacity:1 !important; margin: 5vh 0 0 5vw; border-radius: 30px; text-align:center;">
+            <div style="text-align: right;">
+                <a class="close0" href="index8.html" style="font-size: 1vw; display: inline-block;padding: 20px;">닫기 X</a>
+            </div>
+            <p style="font-size: 3vw; padding: 32px;">여러분의 생각을 자유롭게 남겨주세요</p>	
+            <div id="app">
+                <div>
+                      <span>여러분의 생각을 자유롭게 남겨주세요<input type="text" class="memo-name" v-model="newMemo"></span>
+                      <template v-if="state=='add'">
+                            <button class="btn-add-memo" @click="addMemo"> 추가하기</button>
+                      </template>
+          
+                      <template v-if="state=='update'">
+                            <button class="btn-add-memo" @click="updateMemo"> 적용하기</button>
+                             <button class="btn-add-memo" @click="clearEditMode"> 취소하기</button>
+                      </template>
+                </div>
+          
+                <div class="postit_list">
+                      <ul>
+                            <li v-for="(memo, index) in list" :key="index">
+                                  {{memo}}
+                                  <button @click="deleteMemo(memo)">삭제</button>
+                                  <button @click="setEditMode(memo, index)">수정</button>
+                            </li>
+                      </ul>
+                </div>
+          
+          </div>
+          
+          <script>
+                const EDIT_MODE = {
+                      UPDATE: "update",
+                      ADD: "add"
+                }
+                var data = {
+                      list:["앞으로 사회가 동물들의 권리를 더 보장하는 방향으로 나아갔으면 좋겠어요~","태조 이방원 방송 보면서 말 넘어지는 거 보고 깜짝 놀랐는데.. 이런 히스토리가 있었군요ㅠ 동물이 동원된 촬영에선 선진국 사례를 잘 보고 배워야 할 것 같습니다"],
+                      newMemo:"",
+                      state:EDIT_MODE.ADD,
+                      updateIdx: -1
+                }
+          
+                var vm = new Vue({
+                      el: '#app',
+                      data:data,
+                      methods:{
+                            addMemo(){
+                                  if(this.newMemo.length == 0){
+                                        alert("Fill in the blank!")
+                                        return
+                                  }
+                                  this.list.push(this.newMemo)
+                            },
+                            deleteMemo(targetMemo){
+                                  let index = this.list.findIndex(memo=>memo==targetMemo)
+          
+                                  if(index != -1)
+                                        this.list.splice(index, 1)
+                            },
+                            setEditMode(targetMemo, idx){
+                                  this.newMemo = targetMemo
+                                  this.state = EDIT_MODE.UPDATE
+                                  this.updateIdx = idx
+                            },
+                            clearEditMode(){
+                                  this.state = EDIT_MODE.ADD
+                                  this.newMemo = ""
+                                  this.updateIdx = -1
+                            },
+                            updateMemo(){
+                                  this.list[this.updateIdx] = this.newMemo
+                                  this.clearEditMode()
+                            }
+                      }
+                })
+          </script>
+        <!--
+            <div style="text-align: right;">
+                <a href="index8.html" style="font-size: 1vw;display: inline-block;padding: 20px;">등록하기</a>
+                <a href="index8.html" style="font-size: 1vw;display: inline-block;padding: 20px;">삭제하기</a>
+            </div>
+        -->
+        </div>	
+    </div>
+
+    
+    <script>
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 10 && $('body, html').scrollTop() < 1300){	
+            $("#word1").fadeIn();
+        }else{	
+            $("#word1").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1300 && $('body, html').scrollTop() < 1600){	
+            $("#word2").fadeIn();
+        }else{	
+            $("#word2").fadeOut();
+	    }	
+    })	
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 1600 && $('body, html').scrollTop() < 2200){	
+            $("#question1").fadeIn();
+        }else{	
+            $("#question1").fadeOut();
+	    }	
+    })
+    $(".gogo1").click(function(){
+        $("#question1").css('opacity','0');
+        event.preventDefault();
+    });
+    $(".hide1").click(function(){
+        $("#question1").css('opacity','0');
+        $("#info1").css('opacity','0');
+        event.preventDefault();
+    });
+    $(window).scroll(function(){		
+        if($('body, html').scrollTop() > 2200 && $('body, html').scrollTop() < 9000){	
+            $("#info1").fadeIn();
+        }else{	
+            $("#info1").fadeOut();
+	    }	
+    })
+    $(".close1").click(function(){
+        $("#info1").css('opacity','0');
+        event.preventDefault();
+    });
+
+    </script>
+
+
+
+
+<script type='text/javascript'>
+    $(function(){
+      var lastScroll = 0;
+      $(window).scroll(function(event){
+          var st = $(this).scrollTop();
+          if (st > lastScroll){
+            $(".img_person").attr("src", "images/person.gif");
+            $(".img_horse").attr("src", "images/horse.gif");
+            $(".img_hamster").attr("src", "images/hamster.gif");
+            $(".img_chicken").attr("src", "images/chicken.gif");
+            $(".img_dog").attr("src", "images/dog.gif");
+            $(".img_cat").attr("src", "images/cat.gif");
+            $(".img_whale").attr("src", "images/whale.gif");
+          }
+          else {
+            $(".img_person").attr("src", "images/person_b.gif");
+            $(".img_horse").attr("src", "images/horse_b.gif");
+            $(".img_hamster").attr("src", "images/hamster_b.gif");
+            $(".img_chicken").attr("src", "images/chicken_b.gif");
+            $(".img_dog").attr("src", "images/dog_b.gif");
+            $(".img_cat").attr("src", "images/cat_b.gif");
+            $(".img_whale").attr("src", "images/whale_b.gif");
+          }
+          lastScroll = st;
+      });
+    });
+</script>
+
+</body>
+</html>
